@@ -1,0 +1,16 @@
+<h3>Lista de héroes</h3>
+<ul class="mt-2 list-group">
+  <li class="list-group-item">Goku</li>
+  <li class="list-group-item">Vegeta</li>
+  <li class="list-group-item">Piccolo</li>
+  <li class="list-group-item">Trunks</li>
+</ul>
+<ul class="mt-2 list-group">
+  <li *ngFor="let nombre of nombreHeroes" class="list-group-item">{{nombre}}</li>
+</ul>
+<button class="btn btn-outline-danger" (click)="borrarUltimoHeroe()">Borrar último heroe</button>
+<ul class="mt-2 list-group">
+  @for (nombre of nombreHeroes; track nombre) {
+    <li class="list-group-item">{{nombre}}</li>
+  }
+</ul>
